@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ListItem from './components/ListItem';
 import * as AnimeSvc from './services/AniSVC'; 
 
 
@@ -29,11 +30,8 @@ function App() {
         <h2>More than 50 results</h2> :
         <div>
           <p>Amount of results: {searchResults.length}</p>
-          {searchResults.map((x:any) =>
-            <div> 
-              <h2 key={x.anilist_id}>{x.titles.en}</h2>
-              <img alt='cover' src={x.cover_image} />
-            </div>
+          {searchResults.map((x:any) => 
+            <ListItem key={x.mal_id} title={x.titles.en} cover_image={x.cover_image} />
           )}
         </div>
       }

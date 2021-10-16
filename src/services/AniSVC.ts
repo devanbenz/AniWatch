@@ -16,7 +16,22 @@ const getAnime = async (title:String): Promise<Response|undefined> => {
     }
 }
 
+const addFavorite = async (title: string, cover_image: string) => {
+    try{
+        await fetch('http://localhost:3000/api/v1/fav', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ title: title, cover_image: cover_image })
+        })
+    }catch(e){
+        console.log(e)
+    }
+}
+
 
 export {
-    getAnime
+    getAnime,
+    addFavorite
 }

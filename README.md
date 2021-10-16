@@ -11,5 +11,6 @@ I need help managing what Animes I am watching and wanted to track my watch hist
 - *Get better at using typescript* 
 
 *Done*
+- [Backend](https://github.com/devanbenz/AniWatch-Backend) created
 - Create search component that will list anime
 - Find REST API for anime data [AniAPI](https://aniapi.com/)
